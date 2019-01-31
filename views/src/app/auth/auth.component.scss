@@ -112,7 +112,7 @@ ul.tabs li{
 .login-form i {
     position: absolute;
     top: 0;
-    left: 19px;
+    left: 16px;
     line-height: 60px;
     color: rgba(40, 52, 67, 1);
     z-index:100;
@@ -124,6 +124,7 @@ ul.tabs li{
     height: 60px;
     padding: 10px 25px;
     border-radius: 0;
+    
 }
 
 .login input[type="email"],
@@ -133,7 +134,7 @@ ul.tabs li{
     border: 0px solid #4a525f;
     color: #eee;
     border-left: 45px solid #93a5ab;
-    border-radius:40px;
+    border-radius: 20px 0 20px 0;
 }
 
 .login input:focus {
