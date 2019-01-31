@@ -1,0 +1,59 @@
+<body class="login vertical-center">
+    <div class="container">
+        <div class="login-wrapper clearfix">
+            <ul class="tabs clearfix">
+                <li class="left-tab active" data-tab="login">
+                    <a>Login</a>
+                </li>
+                <li class="right-tab" data-tab="sign_up">
+                    <a>Sign Up</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="login">
+                    <form class="form-horizontal login-form">
+                        <div class="form-group relative">
+                            <input class="form-control input-lg" id="username" placeholder="E-mail Address" required=""
+                                type="email"> <i class="fa fa-user"></i>
+                        </div>
+                        <div class="form-group relative">
+                            <input class="form-control input-lg" id="password" placeholder="Password" required="" type="password">
+                            <i class="fa fa-key"></i>
+                        </div>
+                        <hr />
+                        <div class="form-group">
+                            <button class="btn btn-success btn-lg btn-block" type="submit">Login</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane" id="sign_up">
+                    <form class="form-horizontal login-form">
+                        <div class="form-group relative">
+                            <input class="form-control input-lg" id="registerUsername" placeholder="E-mail Address" required=""
+                                type="email"> <i class="fa fa-user"></i>
+                        </div>
+                        <div class="form-group relative">
+                            <input class="form-control input-lg" id="registerPassword" placeholder="Password" required="" type="password">
+                            <i class="fa fa-key"></i>
+                        </div>
+                        <div class="form-group relative">
+                            <input class="form-control input-lg" id="confirmPassword" placeholder="Repeat Password" required=""
+                                type="password"> <i class="fa fa-key"></i>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-lg btn-block" type="submit">Sign Up</button>
+                        </div>
+                        <div class="checkbox checkbox-success">
+                            <input id="agree-terms" type="checkbox">
+                            <label for="agree-terms"> Agree our terms</label>
+                        </div>
+                        <hr>
+                        <div class="text-center">
+                            <label><a href="#">Already Member?</a></label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
