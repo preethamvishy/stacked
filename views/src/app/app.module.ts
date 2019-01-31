@@ -10,12 +10,14 @@ import { AuthComponent } from './auth/auth.component';
 import { HomeComponent } from './home/home.component';
 
 import { APP_ROUTES } from './app.routes';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
     HomeComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

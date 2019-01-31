@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:500');
+$mainColor: rgba(7, 45, 92, 0.75);
+$secondaryColor: #ffffff;
+
+.wide {
+    width: 100%;
+    background-color: $mainColor;
+    padding: 30px;
+    font-family: 'Raleway', sans-serif;
+    transition: all 0.2s linear;
+    .form {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .input-container {
+        position: relative;
+        textarea.textarea {
+            width: 100%;
+            padding: 5%;
+            border: none;
+            resize: none;
+            border-radius: 10px;
+            outline: none;
+            color: $mainColor;
+            font-size: 40px;
+            transition: all 0.5s linear;
+            height: 245px;
+        }
+        span {
+            position: absolute;
+            bottom: -32px;
+            right: 16px;
+            font-size: 18px;
+            transition: all 0.2s linear;
+            padding: 5px;
+            color: $secondaryColor;
+        }
+    }
+}

@@ -1,10 +1,16 @@
 
 @import url(https://fonts.googleapis.com/css?family=Knewave);
+$mainColor: rgba(7, 45, 92, 0.75);
 
 .logo-text {
     font-family: 'Knewave', cursive;
     font-size: 32px;
     text-transform: uppercase;
+    // color: $mainColor;
+
+    // &:hover {
+    //     color: rgba(7, 45, 92, 1);;
+    // }
 }
 
 .navbar button {

@@ -1,0 +1,17 @@
+<section class="wide">
+    <div class="container ">
+        <div class="row">
+            <div class="form col-sm-8 col-sm-offset-2">
+                <div class="input-container">
+                    <textarea [(ngModel)]="content.text" 
+                                (ngModelChange)="input($event)" 
+                                placeholder="What's on your mind?"
+                                class="textarea shadow-sm"
+                                id="textarea">
+                    </textarea>
+                    <span id="n">{{280 - content.text.length}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
