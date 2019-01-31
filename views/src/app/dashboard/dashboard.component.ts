@@ -18,12 +18,12 @@ export class DashboardComponent implements OnInit {
   input(e)
   {
     var ele = document.getElementById("textarea");
-    if(e.length > 32) {
+    if(e.length > 35) {
       ele.style.transition = '0.4s';
-      ele.style.fontSize = '24px';
+      ele.style.fontSize = '20px';
     }
     else 
-      ele.style.fontSize = '40px';
+      ele.style.fontSize = '32px';
   }
 
 }
