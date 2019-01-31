@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthComponent implements OnInit {
 
+  left: boolean = true;
+
   constructor() { }
 
+
   ngOnInit() {
+
   }
 
+  toggle(bool: boolean) {
+    this.left = bool;
+  }
 }

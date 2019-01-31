@@ -2,15 +2,15 @@
     <div class="container">
         <div class="login-wrapper clearfix">
             <ul class="tabs clearfix">
-                <li class="left-tab active" data-tab="login">
+                <li [ngClass]="left ? 'left-tab active' : 'left-tab'" data-tab="login" (click)="toggle(true)">
                     <a>Login</a>
                 </li>
-                <li class="right-tab" data-tab="sign_up">
+                <li [ngClass]="!left ? 'right-tab active' : 'right-tab'" data-tab="sign_up" (click)="toggle(false)">
                     <a>Sign Up</a>
                 </li>
             </ul>
             <div class="tab-content">
-                <div class="tab-pane active" id="login">
+                <div [ngClass]="left ? 'tab-pane active' : 'tab-pane'" id="login">
                     <form class="form-horizontal login-form">
                         <div class="form-group relative">
                             <input class="form-control input-lg" id="username" placeholder="E-mail Address" required=""
@@ -26,30 +26,24 @@
                         </div>
                     </form>
                 </div>
-                <div class="tab-pane" id="sign_up">
+                <div [ngClass]="!left ? 'tab-pane active' : 'tab-pane'" id="sign_up">
                     <form class="form-horizontal login-form">
                         <div class="form-group relative">
-                            <input class="form-control input-lg" id="registerUsername" placeholder="E-mail Address" required=""
-                                type="email"> <i class="fa fa-user"></i>
+                            <input class="form-control input-lg" id="registerUsername" placeholder="E-mail Address"
+                                required="" type="email"> <i class="fa fa-user"></i>
                         </div>
                         <div class="form-group relative">
-                            <input class="form-control input-lg" id="registerPassword" placeholder="Password" required="" type="password">
+                            <input class="form-control input-lg" id="registerPassword" placeholder="Password" required=""
+                                type="password">
                             <i class="fa fa-key"></i>
                         </div>
                         <div class="form-group relative">
-                            <input class="form-control input-lg" id="confirmPassword" placeholder="Repeat Password" required=""
-                                type="password"> <i class="fa fa-key"></i>
-                        </div>
-                        <div class="form-group">
-                            <button class="btn btn-success btn-lg btn-block" type="submit">Sign Up</button>
-                        </div>
-                        <div class="checkbox checkbox-success">
-                            <input id="agree-terms" type="checkbox">
-                            <label for="agree-terms"> Agree our terms</label>
+                            <input class="form-control input-lg" id="confirmPassword" placeholder="Re-type password"
+                                required="" type="password"> <i class="fa fa-key"></i>
                         </div>
                         <hr>
-                        <div class="text-center">
-                            <label><a href="#">Already Member?</a></label>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-lg btn-block" type="submit">Sign Up</button>
                         </div>
                     </form>
                 </div>
