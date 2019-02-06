@@ -2,45 +2,71 @@
 $mainColor: rgba(7, 45, 92, 0.75);
 $secondaryColor: #ffffff;
 
-.wide {
-    width: 100%;
-    padding: 30px;
+* {
     font-family: 'Raleway', sans-serif;
-    transition: all 0.2s linear;
-    .form {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .input-container {
-        position: relative;
-        #counter {
-            font-size: 18px;
-            transition: all 0.2s linear;
-            color: $mainColor;
-        }
-
-        #scheduleBtn {
-            position: absolute;
-            bottom: -32px;
-            right: 16px;
-            font-size: 18px;
-            transition: all 0.2s linear;
-            padding: 5px;
-            color: $secondaryColor;
-        }
-    }
-    
 }
 
-.textarea {
+
+.input-container {
+    margin-left: auto;
+    margin-right: auto;
+    .textarea {
+        margin: 5%;
+        width: auto;
+        padding: 5%;
+        border: none;
+        resize: none;
+        border-radius: 10px;
+        outline: none;
+        color: $mainColor;
+        font-size: 32px;
+        transition: all 0.5s linear;
+        overflow-y: scroll;
+        min-height: 220px;
+    }
+}
+
+.image {
+    float: left;
+    width: 23%;
+    margin: 1%;
+    padding: 1%;
+    height: 140px;
+    border: 1px solid;
+    img {
+        max-width:100%;
+        max-height:100%;
+        object-fit: contain;
+    }
+}
+  
+.row::after {
+content: "";
+    clear: both;
+    display: table;
+}
+
+.imageDropContainer {
+text-align: center;
+color: #999;
+float: left;
+width: 23%;
+height: 140px;
+margin: 1%;
+padding: 1%;
+border: 2px dashed #ccc;
+transition: transform 0.3s;
+
+input[type="file"] {
+    box-sizing: border-box;
+    position: absolute;
+    height: 100%;
     width: 100%;
-    padding: 5%;
-    border: none;
-    resize: none;
-    border-radius: 10px;
-    outline: none;
-    color: $mainColor;
-    font-size: 32px;
-    transition: all 0.5s linear;
-    height: 220px;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+}
+.dragHover {
+    transform: scale(1.1);
 }

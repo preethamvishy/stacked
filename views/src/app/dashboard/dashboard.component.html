@@ -1,34 +1,52 @@
-<section class="wide">
-    <div class="container">
+<div class="container">
+    <div class="card input-container shadow-sm col-sm-8 col-sm-offset-2">
+        <textarea [(ngModel)]="content.text" (ngModelChange)="input($event)" placeholder="What's on your mind?" class="textarea card-img-top"
+            id="textarea">
+        </textarea>
         <div class="row">
-            <div class="form col-sm-8 col-sm-offset-2">
-                <div class="input-container">
-                    <textarea [(ngModel)]="content.text" (ngModelChange)="input($event)" placeholder="What's on your mind?"
-                        class="textarea shadow-sm" id="textarea">
-                    </textarea>
-
-                    <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-success">Post now</button>
-                            <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="sr-only">Post now</span>
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Post now</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Schedule</a>
-                                <a class="dropdown-item" href="#">Time</a>
-                            </div>
-                        </div>
-                        <div class="input-group">
-                            <button type="button" class="btn btn-secondary" disabled>
-                                {{280 - content.text.length}}
-                            </button>
-                        </div>
+            <div *ngFor="let url of fileUrls; let i=index" class="image">
+                <img [src]="url" [id]="'preview' + i" style="width:100%">
+            </div>
+            <ng-container *ngIf="fileUrls.length < 4">
+                <div class="imageDropContainer" id="imageDropContainer">
+                    Select image or drop image here
+                    <input type="file" accept="image/*" multiple (change)="dropContainerChange($event)" (dragover)="dragOver()"
+                        (drop)="dropImage()" (dragleave)="dragleave()" id="uploadFile" />
+                </div>
+            </ng-container>
+        </div>
+        <div class="card-body">
+            <div class="btn-toolbar justify-content-between" role="toolbar">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success">Post now</button>
+                    <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <span class="sr-only">Post now</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Post now</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Schedule</a>
+                        <a class="dropdown-item" href="#">Time</a>
                     </div>
+                </div>
+                <div class="input-group">
+                    <button type="button" class="btn btn-secondary" disabled>
+                        {{280 - content.text.length}}
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
+<!-- <div class="container">
+    <section>
+        <ul class="list-group">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+    </section>
+</div> -->
