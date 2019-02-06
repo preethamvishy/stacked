@@ -4,16 +4,18 @@
             id="textarea">
         </textarea>
         <div class="row">
-            <div *ngFor="let url of fileUrls; let i=index" class="image">
-                <img [src]="url" [id]="'preview' + i" style="width:100%">
-            </div>
-            <ng-container *ngIf="fileUrls.length < 4">
-                <div class="imageDropContainer" id="imageDropContainer">
-                    <label for="uploadFile">Select image or drop image here</label>
-                    <input type="file" accept="image/*" multiple (change)="dropContainerChange($event)" (dragover)="dragOver()"
-                        (drop)="dropImage()" (dragleave)="dragleave()" id="uploadFile" />
+            <div class="container" style="margin-left: 4%;margin-right: 4%;padding-left: 4%;padding-right: 4%">
+                <div *ngFor="let url of fileUrls; let i=index" class="image">
+                    <img [src]="url" [id]="'preview' + i" style="width:100%">
                 </div>
-            </ng-container>
+                <ng-container *ngIf="fileUrls.length < 4">
+                    <div class="imageDropContainer" id="imageDropContainer">
+                        <label for="uploadFile">Select image or drop image here</label>
+                        <input type="file" accept="image/*" multiple (change)="dropContainerChange($event)" (dragover)="dragOver()"
+                            (drop)="dropImage()" (dragleave)="dragleave()" id="uploadFile" />
+                    </div>
+                </ng-container>
+            </div>
         </div>
         <div class="card-body">
             <div class="btn-toolbar justify-content-between" role="toolbar">
@@ -24,10 +26,10 @@
                         <span class="sr-only">Post now</span>
                     </button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Post now</a>
+                        <a class="dropdown-item">Post now</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Schedule</a>
-                        <a class="dropdown-item" href="#">Time</a>
+                        <a class="dropdown-item">Schedule</a>
+                        <a class="dropdown-item">Time</a>
                     </div>
                 </div>
                 <div class="input-group">
@@ -38,15 +40,67 @@
             </div>
         </div>
     </div>
+
+    <div class="content-list card shadow-sm col-sm-8 col-sm-offset-2">
+        <div class="content-list-wrapper clearfix ">
+            <ul class="tabs clearfix">
+                <li [ngClass]="left ? 'left-tab active' : 'left-tab'" data-tab="login" (click)="toggle(true)">
+                    <a>Queue</a>
+                </li>
+                <li [ngClass]="!left ? 'right-tab active' : 'right-tab'" data-tab="sign_up" (click)="toggle(false)">
+                    <a>History</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div [ngClass]="left ? 'tab-pane active' : 'tab-pane'" id="login">
+                    <div class="card-body border-bottom">
+                        <p class="card-text">#FilmTwitter, you get to decide what the ultimate holiday movie is.
+
+                            12/11 ➖ Round 1
+                            12/12 ➖ Semi-Final
+                            12/13 ➖ Final
+                            12/14 ➖ Winner Crowned
+
+                            Round 1 starts in the thread below.</p>
+                        <a class="btn btn-primary">View Tweet</a>
+                    </div>
+                    <div class="card-body border-bottom">
+                        <p class="card-text">#FilmTwitter, you get to decide what the ultimate holiday movie is.
+
+                            12/11 ➖ Round 1
+                            12/12 ➖ Semi-Final
+                            12/13 ➖ Final
+                            12/14 ➖ Winner Crowned
+
+                            Round 1 starts in the thread below.</p>
+                        <a class="btn btn-primary">View Tweet</a>
+                    </div>
+                </div>
+                <div [ngClass]="!left ? 'tab-pane active' : 'tab-pane'" id="sign_up">
+                    <div class="card-body border-bottom">
+                        <p class="card-text">#FilmTwitter, you get to decide what the ultimate holiday movie is.
+
+                            12/11 ➖ Round 1
+                            12/12 ➖ Semi-Final
+                            12/13 ➖ Final
+                            12/14 ➖ Winner Crowned
+
+                            Round 1 starts in the thread below.</p>
+                        <a class="btn btn-primary">View Tweet</a>
+                    </div>
+                    <div class="card-body border-bottom ">
+                        <p class="card-text">#FilmTwitter, you get to decide what the ultimate holiday movie is.
+
+                            12/11 ➖ Round 1
+                            12/12 ➖ Semi-Final
+                            12/13 ➖ Final
+                            12/14 ➖ Winner Crowned
+
+                            Round 1 starts in the thread below.</p>
+                        <a class="btn btn-primary">View Tweet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<!-- <div class="container">
-    <section>
-        <ul class="list-group">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-        </ul>
-    </section>
-</div> -->

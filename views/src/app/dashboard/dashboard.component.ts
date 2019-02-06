@@ -12,7 +12,7 @@ export class DashboardComponent implements OnInit {
     text: ""
   }
   fileUrls = [];
-
+  left: boolean = false;
   constructor(private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
@@ -20,12 +20,12 @@ export class DashboardComponent implements OnInit {
 
   input(e) {
     var ele = document.getElementById("textarea");
-    if (e.length > 35) {
+    if (e.length > 46) {
       ele.style.transition = '0.4s';
-      ele.style.fontSize = '20px';
+      ele.style.fontSize = '16px';
     }
     else
-      ele.style.fontSize = '32px';
+      ele.style.fontSize = '24px';
   }
 
   dropContainerChange(event) {
@@ -57,5 +57,9 @@ export class DashboardComponent implements OnInit {
 
   dragleave() {
     document.getElementById('imageDropContainer').className = 'dragHoverimageDropContainer';
+  }
+
+  toggle(bool: boolean) {
+    this.left = bool;
   }
 }
