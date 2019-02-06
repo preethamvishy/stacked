@@ -4,7 +4,6 @@ $secondaryColor: #ffffff;
 
 .wide {
     width: 100%;
-    background-color: $mainColor;
     padding: 30px;
     font-family: 'Raleway', sans-serif;
     transition: all 0.2s linear;
@@ -14,19 +13,13 @@ $secondaryColor: #ffffff;
     }
     .input-container {
         position: relative;
-        textarea.textarea {
-            width: 100%;
-            padding: 5%;
-            border: none;
-            resize: none;
-            border-radius: 10px;
-            outline: none;
+        #counter {
+            font-size: 18px;
+            transition: all 0.2s linear;
             color: $mainColor;
-            font-size: 32px;
-            transition: all 0.5s linear;
-            height: 220px;
         }
-        span {
+
+        #scheduleBtn {
             position: absolute;
             bottom: -32px;
             right: 16px;
@@ -36,4 +29,18 @@ $secondaryColor: #ffffff;
             color: $secondaryColor;
         }
     }
+    
+}
+
+.textarea {
+    width: 100%;
+    padding: 5%;
+    border: none;
+    resize: none;
+    border-radius: 10px;
+    outline: none;
+    color: $mainColor;
+    font-size: 32px;
+    transition: all 0.5s linear;
+    height: 220px;
 }

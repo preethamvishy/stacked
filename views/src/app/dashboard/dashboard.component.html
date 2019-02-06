@@ -1,15 +1,32 @@
 <section class="wide">
-    <div class="container ">
+    <div class="container">
         <div class="row">
             <div class="form col-sm-8 col-sm-offset-2">
                 <div class="input-container">
-                    <textarea [(ngModel)]="content.text" 
-                                (ngModelChange)="input($event)" 
-                                placeholder="What's on your mind?"
-                                class="textarea shadow-sm"
-                                id="textarea">
+                    <textarea [(ngModel)]="content.text" (ngModelChange)="input($event)" placeholder="What's on your mind?"
+                        class="textarea shadow-sm" id="textarea">
                     </textarea>
-                    <span id="n">{{280 - content.text.length}}</span>
+
+                    <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-success">Post now</button>
+                            <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Post now</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Post now</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Schedule</a>
+                                <a class="dropdown-item" href="#">Time</a>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <button type="button" class="btn btn-secondary" disabled>
+                                {{280 - content.text.length}}
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
