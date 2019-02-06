@@ -9,7 +9,7 @@
             </div>
             <ng-container *ngIf="fileUrls.length < 4">
                 <div class="imageDropContainer" id="imageDropContainer">
-                    Select image or drop image here
+                    <label for="uploadFile">Select image or drop image here</label>
                     <input type="file" accept="image/*" multiple (change)="dropContainerChange($event)" (dragover)="dragOver()"
                         (drop)="dropImage()" (dragleave)="dragleave()" id="uploadFile" />
                 </div>

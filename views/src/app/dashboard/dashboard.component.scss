@@ -24,6 +24,30 @@ $secondaryColor: #ffffff;
         overflow-y: scroll;
         min-height: 220px;
     }
+    .row {
+        .imageDropContainer {
+            text-align: center;
+            color: #999;
+            float: left;
+            width: 23%;
+            height: 140px;
+            margin: 1%;
+            padding: 1%;
+            border: 2px dashed #ccc;
+            transition: transform 0.3s;
+            
+            input[type="file"] {
+                box-sizing: border-box;
+                // position: absolute;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                top: 0;
+                left: 0;
+                transform: translate(0, -50%);
+            }
+        }
+    }
 }
 
 .image {
@@ -46,27 +70,68 @@ content: "";
     display: table;
 }
 
-.imageDropContainer {
-text-align: center;
-color: #999;
-float: left;
-width: 23%;
-height: 140px;
-margin: 1%;
-padding: 1%;
-border: 2px dashed #ccc;
-transition: transform 0.3s;
 
-input[type="file"] {
-    box-sizing: border-box;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    top: 0;
-    left: 0;
-}
-}
 .dragHover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+
+@media only screen and (max-width: 991px) {
+        #uploadFile {
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            transform: translate(0, -80%);
+        }
+  }
+
+  @media only screen and (max-width: 770px) {
+    #uploadFile {
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        transform: translate(0, -98%);
+    }
+}
+
+@media only screen and (max-width: 572px) {
+    #uploadFile {
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        transform: translate(0, -71%);
+    }
+}
+
+
+@media only screen and (max-width: 572px) {
+    #uploadFile {
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        transform: translate(0, -80%);
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    #uploadFile {
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        transform: translate(0, -90%);
+    }
 }
